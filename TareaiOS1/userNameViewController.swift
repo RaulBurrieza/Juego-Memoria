@@ -19,7 +19,13 @@ class userNameViewController: UIViewController {
     }
 
     @IBAction func didTapOnButton(_ sender: UIButton) {
-            
+            saveLocalUser()
+    }
+    
+    func saveLocalUser(){
+        let userName = userNameTextField.text
+        UserDefaults.standard.set(userName,forKey: "userName")
+        print(UserDefaults.standard.value(forKey: "userName"))
     }
     
 }
