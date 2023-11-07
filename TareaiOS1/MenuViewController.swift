@@ -11,7 +11,6 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func didTapOnButton(_ sender: UIButton) {
-        print("HOLAAAA")
         shouldPerformSegue(withIdentifier:"toMainScreen", sender:nil)
         
     }

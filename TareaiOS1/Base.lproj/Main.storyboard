@@ -30,7 +30,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="JUGAR"/>
                                 <connections>
                                     <action selector="didTapOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HcV-A5-2pk"/>
-                                    <segue destination="IvL-nN-oOd" kind="presentation" identifier="toMainScreen" id="X95-uW-pn0"/>
+                                    <segue destination="IvL-nN-oOd" kind="presentation" identifier="toMainScreen" modalPresentationStyle="fullScreen" id="X95-uW-pn0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -59,11 +59,11 @@
             <objects>
                 <viewController id="IvL-nN-oOd" customClass="userNameViewController" customModule="TareaiOS1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUT-o4-jWQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hhz-jF-2fO">
-                                <rect key="frame" x="95" y="368.5" width="224" height="149"/>
+                                <rect key="frame" x="95" y="373.5" width="224" height="149"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu nombre porfavor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTI-bl-A7f" userLabel="Label">
                                         <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
@@ -83,6 +83,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="didTapOnButton:" destination="IvL-nN-oOd" eventType="touchUpInside" id="LaU-mW-ATU"/>
+                                            <segue destination="k1Q-tp-nQa" kind="presentation" identifier="toGameScreen" id="AxJ-Bj-cj9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -118,6 +119,36 @@
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="2.6785714285714284"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Jrk-iP-96Q">
+            <objects>
+                <viewController id="k1Q-tp-nQa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0bC-WX-kxC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-0O-gW3">
+                                <rect key="frame" x="77" y="297" width="241" height="84"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VZX-tk-x8r"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VZX-tk-x8r" firstAttribute="bottom" secondItem="xfN-0O-gW3" secondAttribute="bottom" constant="505" id="QGS-xQ-fJ9"/>
+                            <constraint firstItem="xfN-0O-gW3" firstAttribute="top" secondItem="VZX-tk-x8r" secondAttribute="top" constant="297" id="UM2-C6-MD4"/>
+                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="xfN-0O-gW3" secondAttribute="trailing" constant="96" id="o2m-uz-VRv"/>
+                            <constraint firstItem="xfN-0O-gW3" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="77" id="tgv-Ux-Kut"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="u06-9e-yJm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VQm-P9-BVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1656.521739130435" y="2.6785714285714284"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">
@@ -125,6 +156,9 @@
         </systemColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
