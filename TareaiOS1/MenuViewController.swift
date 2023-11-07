@@ -12,7 +12,8 @@ class MenuViewController: UIViewController {
     
     @IBAction func didTapOnButton(_ sender: UIButton) {
         
-        if((UserDefaults.standard.value(forKey: "userName")) != nil){shouldPerformSegue(withIdentifier:"toUserNameScreen", sender:nil)}
+        if((UserDefaults.standard.value(forKey: "userName")) != nil){
+            shouldPerformSegue(withIdentifier:"toUserNameScreen", sender:nil)}
         else{
             shouldPerformSegue(withIdentifier:"toGameScreen", sender:nil)
         }
