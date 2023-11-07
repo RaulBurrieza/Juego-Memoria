@@ -154,6 +154,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u06-9e-yJm"/>
+                    <connections>
+                        <outlet property="adviceLabel" destination="xfN-0O-gW3" id="Hnd-2Q-613"/>
+                        <outlet property="gameImageView" destination="6UF-0Q-d9j" id="Hau-3B-pOI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQm-P9-BVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
