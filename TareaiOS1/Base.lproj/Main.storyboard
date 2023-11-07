@@ -130,27 +130,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuerda memorizar estas imagenes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-0O-gW3" customClass="Gae">
-                                <rect key="frame" x="74" y="134" width="266" height="257"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recuerda memorizar estas imagenes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-0O-gW3" customClass="Gae">
+                                <rect key="frame" x="67" y="122" width="281" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-0Q-d9j">
+                                <rect key="frame" x="92" y="343" width="231" height="210"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VZX-tk-x8r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="xfN-0O-gW3" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="74" id="F9X-0q-nLR"/>
-                            <constraint firstItem="VZX-tk-x8r" firstAttribute="bottom" secondItem="xfN-0O-gW3" secondAttribute="bottom" constant="505" id="QGS-xQ-fJ9"/>
-                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="xfN-0O-gW3" secondAttribute="trailing" constant="74" id="fwk-fs-1e4"/>
-                            <constraint firstItem="xfN-0O-gW3" firstAttribute="top" secondItem="VZX-tk-x8r" secondAttribute="top" constant="134" id="gGa-GJ-tuI"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u06-9e-yJm"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQm-P9-BVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="854" y="779"/>
+            <point key="canvasLocation" x="853.62318840579712" y="778.79464285714278"/>
         </scene>
     </scenes>
     <resources>
