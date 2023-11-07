@@ -16,13 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUESS THE CARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV3-H5-7BE" customClass="TitleLabel">
-                                <rect key="frame" x="20" y="205" width="374" height="42"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <color key="textColor" systemColor="systemPurpleColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" systemColor="secondarySystemBackgroundColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RwR-ZI-aXK">
                                 <rect key="frame" x="123" y="438" width="168" height="34.5"/>
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
@@ -30,20 +23,30 @@
                                 <buttonConfiguration key="configuration" style="filled" title="JUGAR"/>
                                 <connections>
                                     <action selector="didTapOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HcV-A5-2pk"/>
-                                    <segue destination="IvL-nN-oOd" kind="presentation" identifier="toMainScreen" modalPresentationStyle="fullScreen" id="X95-uW-pn0"/>
+                                    <segue destination="IvL-nN-oOd" kind="popoverPresentation" identifier="toMainScreen" popoverAnchorView="RwR-ZI-aXK" id="X95-uW-pn0">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUESS THE CARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV3-H5-7BE" customClass="TitleLabel">
+                                <rect key="frame" x="69" y="204" width="277" height="42"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="secondarySystemBackgroundColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="underPageBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RwR-ZI-aXK" firstAttribute="top" secondItem="mV3-H5-7BE" secondAttribute="bottom" constant="191" id="0cJ-0L-Rqk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RwR-ZI-aXK" secondAttribute="trailing" constant="123" id="4s4-Vz-fGW"/>
+                            <constraint firstItem="mV3-H5-7BE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="69" id="LXq-mn-wn6"/>
                             <constraint firstItem="RwR-ZI-aXK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="123" id="PyF-UB-ptS"/>
-                            <constraint firstItem="mV3-H5-7BE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="157" id="XJs-Vu-dRq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mV3-H5-7BE" secondAttribute="trailing" constant="20" id="fB5-aa-TDH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mV3-H5-7BE" secondAttribute="trailing" constant="68" id="aog-X5-4wv"/>
+                            <constraint firstItem="RwR-ZI-aXK" firstAttribute="top" secondItem="mV3-H5-7BE" secondAttribute="bottom" constant="192" id="hmc-xf-Ahq"/>
+                            <constraint firstItem="mV3-H5-7BE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="156" id="ms8-zK-glw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="RwR-ZI-aXK" secondAttribute="bottom" constant="389.5" id="vRw-nY-XQa"/>
-                            <constraint firstItem="mV3-H5-7BE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vXl-rr-Yz3"/>
                         </constraints>
                     </view>
                     <connections>
@@ -59,11 +62,11 @@
             <objects>
                 <viewController id="IvL-nN-oOd" customClass="userNameViewController" customModule="TareaiOS1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sUT-o4-jWQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="hhz-jF-2fO">
-                                <rect key="frame" x="95" y="373.5" width="224" height="149"/>
+                                <rect key="frame" x="95" y="368.5" width="224" height="149"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Introduce tu nombre porfavor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTI-bl-A7f" userLabel="Label">
                                         <rect key="frame" x="0.0" y="0.0" width="224" height="20.5"/>
@@ -83,7 +86,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="didTapOnButton:" destination="IvL-nN-oOd" eventType="touchUpInside" id="LaU-mW-ATU"/>
-                                            <segue destination="k1Q-tp-nQa" kind="presentation" identifier="toGameScreen" id="AxJ-Bj-cj9"/>
+                                            <segue destination="k1Q-tp-nQa" kind="presentation" identifier="toGameScreen" modalPresentationStyle="fullScreen" id="AxJ-Bj-cj9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -124,12 +127,12 @@
             <objects>
                 <viewController id="k1Q-tp-nQa" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0bC-WX-kxC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="886"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-0O-gW3">
-                                <rect key="frame" x="77" y="297" width="241" height="84"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuerda memorizar estas imagenes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-0O-gW3">
+                                <rect key="frame" x="74" y="134" width="266" height="257"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -137,10 +140,10 @@
                         <viewLayoutGuide key="safeArea" id="VZX-tk-x8r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="xfN-0O-gW3" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="74" id="F9X-0q-nLR"/>
                             <constraint firstItem="VZX-tk-x8r" firstAttribute="bottom" secondItem="xfN-0O-gW3" secondAttribute="bottom" constant="505" id="QGS-xQ-fJ9"/>
-                            <constraint firstItem="xfN-0O-gW3" firstAttribute="top" secondItem="VZX-tk-x8r" secondAttribute="top" constant="297" id="UM2-C6-MD4"/>
-                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="xfN-0O-gW3" secondAttribute="trailing" constant="96" id="o2m-uz-VRv"/>
-                            <constraint firstItem="xfN-0O-gW3" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="77" id="tgv-Ux-Kut"/>
+                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="xfN-0O-gW3" secondAttribute="trailing" constant="74" id="fwk-fs-1e4"/>
+                            <constraint firstItem="xfN-0O-gW3" firstAttribute="top" secondItem="VZX-tk-x8r" secondAttribute="top" constant="134" id="gGa-GJ-tuI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u06-9e-yJm"/>
