@@ -16,6 +16,7 @@
 		DC0A43982AE1107100172387 /* TareaiOS1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0A43972AE1107100172387 /* TareaiOS1Tests.swift */; };
 		DC0A43A22AE1107100172387 /* TareaiOS1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0A43A12AE1107100172387 /* TareaiOS1UITests.swift */; };
 		DC0A43A42AE1107100172387 /* TareaiOS1UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0A43A32AE1107100172387 /* TareaiOS1UITestsLaunchTests.swift */; };
+		DC6AA1B92AFAB3FC00A76261 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6AA1B82AFAB3FC00A76261 /* GameViewController.swift */; };
 		DCD0EDDD2AF8E76900C02FDD /* userNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0EDDC2AF8E76900C02FDD /* userNameViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		DC0A439D2AE1107100172387 /* TareaiOS1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TareaiOS1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC0A43A12AE1107100172387 /* TareaiOS1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TareaiOS1UITests.swift; sourceTree = "<group>"; };
 		DC0A43A32AE1107100172387 /* TareaiOS1UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TareaiOS1UITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC6AA1B82AFAB3FC00A76261 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		DCD0EDDC2AF8E76900C02FDD /* userNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +106,7 @@
 				DC0A43802AE1107000172387 /* AppDelegate.swift */,
 				DC0A43822AE1107000172387 /* SceneDelegate.swift */,
 				DC0A43842AE1107000172387 /* MenuViewController.swift */,
+				DC6AA1B82AFAB3FC00A76261 /* GameViewController.swift */,
 				DCD0EDDC2AF8E76900C02FDD /* userNameViewController.swift */,
 				DC0A43862AE1107000172387 /* Main.storyboard */,
 				DC0A43892AE1107100172387 /* Assets.xcassets */,
@@ -261,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6AA1B92AFAB3FC00A76261 /* GameViewController.swift in Sources */,
 				DC0A43852AE1107000172387 /* MenuViewController.swift in Sources */,
 				DC0A43812AE1107000172387 /* AppDelegate.swift in Sources */,
 				DCD0EDDD2AF8E76900C02FDD /* userNameViewController.swift in Sources */,
