@@ -15,7 +15,11 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         adviceLabel.text = UserDefaults.standard.value(forKey: "userName") as! String + " " + adviceLabel.text!
         gameImageView.image = UIImage(systemName: "gamecontroller.fill")
-
+        
+        var runCount = 20
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+            runCount -= 1
+            print(runCount)}
     }
     
 

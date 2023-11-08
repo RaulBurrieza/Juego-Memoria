@@ -23,9 +23,6 @@
                                 <buttonConfiguration key="configuration" style="filled" title="JUGAR"/>
                                 <connections>
                                     <action selector="didTapOnButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HcV-A5-2pk"/>
-                                    <segue destination="IvL-nN-oOd" kind="popoverPresentation" identifier="toUserNameScreen" popoverAnchorView="RwR-ZI-aXK" id="X95-uW-pn0">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GUESS THE CARD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mV3-H5-7BE" customClass="TitleLabel">
@@ -51,6 +48,8 @@
                     </view>
                     <connections>
                         <outlet property="PlayButton" destination="RwR-ZI-aXK" id="AOk-fC-pMg"/>
+                        <segue destination="IvL-nN-oOd" kind="presentation" identifier="toUserNameScreen" modalPresentationStyle="automatic" id="blK-dq-9Kt"/>
+                        <segue destination="k1Q-tp-nQa" kind="presentation" identifier="toGameScreen" modalPresentationStyle="fullScreen" id="GyK-lc-KYb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -86,7 +85,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="didTapOnButton:" destination="IvL-nN-oOd" eventType="touchUpInside" id="LaU-mW-ATU"/>
-                                            <segue destination="k1Q-tp-nQa" kind="presentation" identifier="toGameScreen" modalPresentationStyle="fullScreen" id="AxJ-Bj-cj9"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -116,11 +114,12 @@
                     <connections>
                         <outlet property="saveButton" destination="fcj-m1-0Ag" id="mu7-UX-fup"/>
                         <outlet property="userNameTextField" destination="v3w-CH-g1U" id="VHJ-Oj-2Em"/>
+                        <segue destination="k1Q-tp-nQa" kind="presentation" identifier="fromUserName" modalPresentationStyle="fullScreen" id="eEv-Ua-21O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mec-mj-3Uo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.62318840579712" y="2.6785714285714284"/>
+            <point key="canvasLocation" x="1417" y="3"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="Jrk-iP-96Q">
@@ -164,6 +163,9 @@
             <point key="canvasLocation" x="853.62318840579712" y="778.79464285714278"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eEv-Ua-21O"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="groupTableViewBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

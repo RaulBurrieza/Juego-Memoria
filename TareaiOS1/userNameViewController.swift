@@ -20,6 +20,7 @@ class userNameViewController: UIViewController {
 
     @IBAction func didTapOnButton(_ sender: UIButton) {
             saveLocalUser()
+        performSegue(withIdentifier: "fromUserName", sender:nil)
     }
     
     func saveLocalUser(){
