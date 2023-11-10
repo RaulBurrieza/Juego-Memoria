@@ -29,8 +29,6 @@ class GameViewController: UIViewController {
         images.shuffle()
         print(images)
         adviceLabel.text = UserDefaults.standard.value(forKey: "userName") as! String + " " + adviceLabel.text!
-        
-        gameImageView.image = images[Int.random(in: 0...images.count)]
         timer()
     
     }
@@ -39,9 +37,12 @@ class GameViewController: UIViewController {
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){ timer in
             runCount -= 1
             self.timeLabel.text = String(runCount)
+            if runCount % 5 == 0{
+                self.changeImage()
+            }
         }
     }
     func changeImage(){
-      gameImageView.image = images.
+        gameImageView.image = images[Int.random(in: 0...images.count)]
     }
 }

@@ -177,11 +177,27 @@
                         <outlet property="adviceLabel" destination="xfN-0O-gW3" id="Hnd-2Q-613"/>
                         <outlet property="gameImageView" destination="6UF-0Q-d9j" id="Hau-3B-pOI"/>
                         <outlet property="timeLabel" destination="EaB-oC-fsm" id="c7Y-8y-3Pi"/>
+                        <segue destination="C8P-cE-XfP" kind="presentation" identifier="toChooseScreen" modalPresentationStyle="fullScreen" id="SRB-Q0-1p5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQm-P9-BVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853.62318840579712" y="778.79464285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="1z1-lK-vMw">
+            <objects>
+                <viewController id="C8P-cE-XfP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lUJ-nz-0r9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Gu9-Ua-jUy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3q9-fb-Q6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713" y="779"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
