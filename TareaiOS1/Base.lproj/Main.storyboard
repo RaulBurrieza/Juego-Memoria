@@ -131,31 +131,52 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuerda memorizar estas imagenes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfN-0O-gW3" customClass="Gae">
                                 <rect key="frame" x="67" y="122" width="281" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="281" id="8QG-P1-sbz"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="ex5-dy-1u5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6UF-0Q-d9j">
-                                <rect key="frame" x="92" y="343" width="231" height="210"/>
+                                <rect key="frame" x="32" y="269" width="350" height="337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="bzh-iR-ZIm"/>
+                                    <constraint firstAttribute="height" constant="337" id="rsX-2N-Bx3"/>
+                                </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaB-oC-fsm">
+                                <rect key="frame" x="139" y="187" width="137" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Nnw-6i-N9m"/>
+                                    <constraint firstAttribute="width" constant="137" id="dkb-nv-4I0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VZX-tk-x8r"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="VZX-tk-x8r" firstAttribute="bottom" secondItem="6UF-0Q-d9j" secondAttribute="bottom" constant="343" id="CnR-vK-9H2"/>
-                            <constraint firstItem="xfN-0O-gW3" firstAttribute="top" secondItem="VZX-tk-x8r" secondAttribute="top" constant="122" id="Iux-HI-dkh"/>
-                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="xfN-0O-gW3" secondAttribute="trailing" constant="66" id="NFY-5m-xO5"/>
-                            <constraint firstItem="6UF-0Q-d9j" firstAttribute="top" secondItem="xfN-0O-gW3" secondAttribute="bottom" constant="200.5" id="SvT-MZ-gGl"/>
-                            <constraint firstItem="xfN-0O-gW3" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="67" id="eHB-ha-Iew"/>
-                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="6UF-0Q-d9j" secondAttribute="trailing" constant="91" id="psp-jH-bBq"/>
-                            <constraint firstItem="6UF-0Q-d9j" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="92" id="wey-Q7-20t"/>
-                            <constraint firstItem="6UF-0Q-d9j" firstAttribute="top" secondItem="xfN-0O-gW3" secondAttribute="bottom" constant="200.5" id="zrK-2n-eWb"/>
+                            <constraint firstItem="EaB-oC-fsm" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="139" id="03E-tb-Ool"/>
+                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="6UF-0Q-d9j" secondAttribute="trailing" constant="32" id="FJM-Rk-kTD"/>
+                            <constraint firstItem="xfN-0O-gW3" firstAttribute="top" secondItem="VZX-tk-x8r" secondAttribute="top" constant="122" id="LeU-lJ-Llx"/>
+                            <constraint firstItem="6UF-0Q-d9j" firstAttribute="top" secondItem="EaB-oC-fsm" secondAttribute="bottom" constant="34" id="NEU-iB-fYO"/>
+                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="xfN-0O-gW3" secondAttribute="trailing" constant="66" id="Nzf-YA-nKg"/>
+                            <constraint firstItem="VZX-tk-x8r" firstAttribute="trailing" secondItem="EaB-oC-fsm" secondAttribute="trailing" constant="138" id="Rpi-gB-dRp"/>
+                            <constraint firstItem="VZX-tk-x8r" firstAttribute="bottom" secondItem="6UF-0Q-d9j" secondAttribute="bottom" constant="290" id="U0w-rh-Ri3"/>
+                            <constraint firstItem="xfN-0O-gW3" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="67" id="XIY-lb-IhO"/>
+                            <constraint firstItem="EaB-oC-fsm" firstAttribute="top" secondItem="xfN-0O-gW3" secondAttribute="bottom" constant="44.5" id="ZxU-Jd-JDj"/>
+                            <constraint firstItem="6UF-0Q-d9j" firstAttribute="leading" secondItem="VZX-tk-x8r" secondAttribute="leading" constant="32" id="bCO-R0-ne9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="u06-9e-yJm"/>
                     <connections>
                         <outlet property="adviceLabel" destination="xfN-0O-gW3" id="Hnd-2Q-613"/>
                         <outlet property="gameImageView" destination="6UF-0Q-d9j" id="Hau-3B-pOI"/>
+                        <outlet property="timeLabel" destination="EaB-oC-fsm" id="c7Y-8y-3Pi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VQm-P9-BVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
