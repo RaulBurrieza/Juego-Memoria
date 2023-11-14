@@ -26,6 +26,7 @@ class userNameViewController: UIViewController {
     func saveLocalUser(){
         let userName = userNameTextField.text
         UserDefaults.standard.set(userName,forKey: "userName")
+        UserDefaults.standard.synchronize()
     }
     
 }
