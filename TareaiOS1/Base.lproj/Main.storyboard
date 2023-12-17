@@ -234,11 +234,61 @@
                     </view>
                     <connections>
                         <outlet property="imagesCollectionView" destination="0tb-rb-JmI" id="xzq-vd-Mqt"/>
+                        <segue destination="nSb-4v-Q1r" kind="presentation" identifier="toScoreScreen" modalPresentationStyle="fullScreen" id="f3u-N4-SJ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3q9-fb-Q6H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711.5942028985507" y="778.79464285714278"/>
+            <point key="canvasLocation" x="1652.1739130434785" y="778.79464285714278"/>
+        </scene>
+        <!--Score View Controller-->
+        <scene sceneID="Olg-J3-rOh">
+            <objects>
+                <viewController id="nSb-4v-Q1r" customClass="ScoreViewController" customModule="TareaiOS1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rEU-49-JmG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Puntuación:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d2g-oA-3TW">
+                                <rect key="frame" x="113" y="144" width="189" height="21.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Otras Puntuaciones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGu-EO-geb">
+                                <rect key="frame" x="93" y="292.5" width="229" height="21.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="S2s-tn-sLV">
+                                <rect key="frame" x="87" y="360" width="240" height="179"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8Tm-iX-W0a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="8Tm-iX-W0a" firstAttribute="trailing" secondItem="S2s-tn-sLV" secondAttribute="trailing" constant="87" id="55i-1p-ESk"/>
+                            <constraint firstItem="8Tm-iX-W0a" firstAttribute="trailing" secondItem="hGu-EO-geb" secondAttribute="trailing" constant="92" id="8vp-Ph-UXJ"/>
+                            <constraint firstItem="d2g-oA-3TW" firstAttribute="leading" secondItem="8Tm-iX-W0a" secondAttribute="leading" constant="113" id="96j-aa-Mbc"/>
+                            <constraint firstItem="S2s-tn-sLV" firstAttribute="top" secondItem="hGu-EO-geb" secondAttribute="bottom" constant="46" id="EMc-wk-5JH"/>
+                            <constraint firstItem="S2s-tn-sLV" firstAttribute="leading" secondItem="8Tm-iX-W0a" secondAttribute="leading" constant="87" id="H0M-cO-QL2"/>
+                            <constraint firstItem="8Tm-iX-W0a" firstAttribute="bottom" secondItem="S2s-tn-sLV" secondAttribute="bottom" constant="357" id="Mkc-d6-365"/>
+                            <constraint firstItem="d2g-oA-3TW" firstAttribute="top" secondItem="8Tm-iX-W0a" secondAttribute="top" constant="144" id="N5O-pQ-Su5"/>
+                            <constraint firstItem="hGu-EO-geb" firstAttribute="leading" secondItem="8Tm-iX-W0a" secondAttribute="leading" constant="93" id="U5d-If-ExK"/>
+                            <constraint firstItem="hGu-EO-geb" firstAttribute="top" secondItem="d2g-oA-3TW" secondAttribute="bottom" constant="127" id="bA7-jO-3uF"/>
+                            <constraint firstItem="S2s-tn-sLV" firstAttribute="top" secondItem="hGu-EO-geb" secondAttribute="bottom" constant="46" id="f91-dV-6ld"/>
+                            <constraint firstItem="8Tm-iX-W0a" firstAttribute="trailing" secondItem="d2g-oA-3TW" secondAttribute="trailing" constant="112" id="mSc-li-yaC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ScoreLabel" destination="d2g-oA-3TW" id="qX3-7m-hu3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N1j-uT-6Bw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2640.579710144928" y="778.79464285714278"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

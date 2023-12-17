@@ -46,7 +46,7 @@ class GameViewController: UIViewController {
     
     //Función que cambia una imagen cada 5 segundos y cuando llega a 0 cambia de pantalla
     func timer(){
-        var runCount = 10
+        var runCount = 20
         var index = 0
         counter = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true){ [self]
             timer in

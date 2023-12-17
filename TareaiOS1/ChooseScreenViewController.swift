@@ -16,6 +16,12 @@ class ChooseScreenViewController: UIViewController,UICollectionViewDataSource, U
     
     var choosePool:[gameImage]=[]
     
+    var score = 0
+    
+    var attempts = 0
+    
+    var currentImg = 0
+    
     @IBOutlet weak var imagesCollectionView: UICollectionView!
     var row = -1
     
@@ -25,15 +31,16 @@ class ChooseScreenViewController: UIViewController,UICollectionViewDataSource, U
         imagesCollectionView.dataSource = self
         imagesCollectionView.delegate = self
         
-        var data = fillList()
+        let data = fillList()
         choosePool=data.shuffled()
         
         print("numero de imagenes:",(String(choosePool.count)))
         
         print("Pool order : \(gameImagesPoolIds)")
     }
-    //funcion que detecta que imagenes han salido en el anterior
-    //View Controller para rellenar una lista y mostrar unicamente esas
+    
+    /* Funcion que detecta que imagenes han salido en el anterior
+    View Controller para rellenar una lista y mostrar unicamente esas*/
     func fillList()->[gameImage]{
     var choosePool:[gameImage]=[]
         for img in gameImages{
@@ -61,9 +68,34 @@ class ChooseScreenViewController: UIViewController,UICollectionViewDataSource, U
         return cell
     }
     
-    func collectionView(_ tableView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         row = indexPath.row
         print("columna seleccionada \(indexPath.row)")
+        
+        if attempts != 5{
+            if choosePool[row].id == gameImagesPoolIds[currentImg]{
+                choosePool[row].image = UIImage.greenimg
+                score += 100
+                attempts += 1
+                currentImg += 1
+                print("ACIERTO")
+                
+            }
+            else{
+                choosePool[row].image = UIImage.redImg
+                attempts += 1
+                print("FALLO")
+            }
+        }
+        else {
+            performSegue(withIdentifier: "toScoreScreen", sender: nil)
+        }
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toScoreScreen"{
+            let nextViewController = segue.destination as! ScoreViewController
+            nextViewController.score = score 
+        }
     }
 }
