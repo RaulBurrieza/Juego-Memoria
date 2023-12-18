@@ -79,6 +79,8 @@ class ChooseScreenViewController: UIViewController,UICollectionViewDataSource, U
                 attempts += 1
                 currentImg += 1
                 print("ACIERTO")
+                print("Score\(score)")
+                print("intentos\(attempts)")
                 
             }
             else{
